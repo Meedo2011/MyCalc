@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Mode Calculator with Math.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Math.js for mathematical operations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator (Normal + Scientific + Graphic)</h1>
+        <!-- Version label -->
+        <div class="version-label">Version Beta 1.2</div>
+
+        <div class="mode-switcher">
+            <button id="normal-btn" class="mode-btn">Normal</button>
+            <button id="scientific-btn" class="mode-btn">Scientific</button>
+            <button id="graphic-btn" class="mode-btn">Graphic</button>
+        </div>
+
+        <!-- Normal Calculator -->
+        <div id="normal-calculator" class="calculator">
+            <input type="text" id="normal-display" readonly placeholder="0">
+            <div class="buttons">
+                <button onclick="press('7')">7</button>
+                <button onclick="press('8')">8</button>
+                <button onclick="press('9')">9</button>
+                <button onclick="press('/')">÷</button>
+                <button onclick="press('4')">4</button>
+                <button onclick="press('5')">5</button>
+                <button onclick="press('6')">6</button>
+                <button onclick="press('*')">×</button>
+                <button onclick="press('1')">1</button>
+                <button onclick="press('2')">2</button>
+                <button onclick="press('3')">3</button>
+                <button onclick="press('-')">−</button>
+                <button onclick="press('0')">0</button>
+                <button onclick="press('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="press('+')">+</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <!-- Scientific Calculator -->
+        <div id="scientific-calculator" class="calculator" style="display: none;">
+            <input type="text" id="scientific-display" readonly placeholder="0">
+            <div class="buttons">
+                <button onclick="press('7')">7</button>
+                <button onclick="press('8')">8</button>
+                <button onclick="press('9')">9</button>
+                <button onclick="press('/')">÷</button>
+                <button onclick="press('4')">4</button>
+                <button onclick="press('5')">5</button>
+                <button onclick="press('6')">6</button>
+                <button onclick="press('*')">×</button>
+                <button onclick="press('1')">1</button>
+                <button onclick="press('2')">2</button>
+                <button onclick="press('3')">3</button>
+                <button onclick="press('-')">−</button>
+                <button onclick="press('0')">0</button>
+                <button onclick="press('.')">.</button>
+                <button onclick="press('sqrt(')">√</button>
+                <button onclick="press('sin(')">sin</button>
+                <button onclick="press('tan(')">tan</button>
+                <button onclick="press('(')">(</button>
+                <button onclick="press(')')">)</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <!-- Graphic Calculator (Under Construction) -->
+        <div id="graphic-calculator" class="calculator" style="display: none;">
+            <p>Graphic Calculator is currently Under Construction!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

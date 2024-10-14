@@ -114,9 +114,8 @@ button:active {
     }
 }
 
-/* Under Construction Message Styling */
-#graphic-calculator p {
-    font-size: 18px;
-    color: #e74c3c; /* Red text for emphasis */
-    font-weight: bold;
+/* Graph styling */
+#graph {
+    width: 100%;
+    height: 400px;
 }
